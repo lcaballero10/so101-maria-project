@@ -11,7 +11,17 @@ add_executable(so101_sim
     src/main.cpp
 )
 
+add_executable(so101_sim_render
+    src/main_render.cpp
+)
+
 target_link_libraries(so101_sim
     PRIVATE
     mujoco::mujoco
+)
+
+target_link_libraries(so101_sim_render
+    PRIVATE
+    mujoco::mujoco
+    glfw
 )
