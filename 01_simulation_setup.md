@@ -69,7 +69,6 @@ int main(void) {
 }
 ```
 
-
 ## References
 
 [1] https://mujoco.readthedocs.io/en/stable/overview.html \
