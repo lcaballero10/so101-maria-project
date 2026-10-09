@@ -13,6 +13,8 @@ mkdir models #for .xml files
 mkdir CMakeLists.txt #configuration file as we use cpp
 ```
 
+## Simulation without render
+
 We create an example file within models folder
 ```bash
 # In mujoco_so101 directory
@@ -69,7 +71,29 @@ int main(void) {
 }
 ```
 
+The above code is presented in the following [file](mujoco_so101/src/main.cpp).
+
+## Simulation with render
+
+The previous code section presented a file that executes the MuJoCo simulation with a simple file without rendering it on the GUI. Now we execute a modified file that includes the render and open the GUI of the simulator. It can be found in this [file](mujoco_so101/src/main_render.cpp).
+
+## Code Building
+
+Compile the C++ code files using the following command.
+```bash
+cmake --build build
+```
+
+For the sake of simplicity, run the compiled executables files in the build folder from the project main directory.
+
+```bash
+#For main.cpp file, as example
+./build/so101_sim
+```
+
+Note: Do not forget to define the CMakeLists.txt file, use the provided one as reference.
+
 ## References
 
 [1] https://mujoco.readthedocs.io/en/stable/overview.html \
-[2] https://mujoco.readthedocs.io/en/latest/programming/#building-from-source \
+[2] https://mujoco.readthedocs.io/en/latest/programming/#building-from-source 
